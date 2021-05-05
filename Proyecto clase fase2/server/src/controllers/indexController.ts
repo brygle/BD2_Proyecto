@@ -7,12 +7,44 @@ class IndexController{
         res.send("Hello");
     }
 
+    public async consulta1(req:Request, res:Response) : Promise<void>{
+        //await cliente.connect()
+        const query = 'select * from cuentahabientes;';
+        const rs =  await cliente.execute(query)
+        //await cliente.shutdown();
+        res.json(rs.rows);
+    }
+    
+    public async consulta2(req:Request, res:Response) : Promise<void>{
+        //await cliente.connect()
+        const query = 'select * from cuentahabientes;';
+        const rs =  await cliente.execute(query)
+        //await cliente.shutdown();
+        res.json(rs.rows);
+    }
+
     public async consulta3(req:Request, res:Response) : Promise<void>{
         //await cliente.connect()
         const query = 'select * from cuentahabientes;';
         const rs =  await cliente.execute(query)
         //await cliente.shutdown();
-        res.json(rs);
+        res.json(rs.rows);
+    }
+
+    public async consulta4(req:Request, res:Response) : Promise<void>{
+        //await cliente.connect()
+        const query = 'select * from cuentahabientes;';
+        const rs =  await cliente.execute(query)
+        //await cliente.shutdown();
+        res.json(rs.rows);
+    }
+
+    public async consulta5(req:Request, res:Response) : Promise<void>{
+        //await cliente.connect()
+        const query = 'select * from cuentahabientes;';
+        const rs =  await cliente.execute(query)
+        //await cliente.shutdown();
+        res.json(rs.rows);
     }
 }
 

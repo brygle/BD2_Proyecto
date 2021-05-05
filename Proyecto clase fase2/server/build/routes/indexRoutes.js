@@ -12,7 +12,11 @@ class IndexRoutes {
     }
     config() {
         this.router.get('/', indexController_1.default.index);
+        this.router.get('/consulta1', indexController_1.default.consulta1);
+        this.router.get('/consulta2', indexController_1.default.consulta2);
         this.router.get('/consulta3', indexController_1.default.consulta3);
+        this.router.get('/consulta4', indexController_1.default.consulta4);
+        this.router.get('/consulta5', indexController_1.default.consulta5);
     }
 }
 const indexRoutes = new IndexRoutes();

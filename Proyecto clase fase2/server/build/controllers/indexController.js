@@ -17,13 +17,49 @@ class IndexController {
     index(req, res) {
         res.send("Hello");
     }
+    consulta1(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            //await cliente.connect()
+            const query = 'select * from cuentahabientes;';
+            const rs = yield database_1.default.execute(query);
+            //await cliente.shutdown();
+            res.json(rs.rows);
+        });
+    }
+    consulta2(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            //await cliente.connect()
+            const query = 'select * from cuentahabientes;';
+            const rs = yield database_1.default.execute(query);
+            //await cliente.shutdown();
+            res.json(rs.rows);
+        });
+    }
     consulta3(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             //await cliente.connect()
             const query = 'select * from cuentahabientes;';
             const rs = yield database_1.default.execute(query);
             //await cliente.shutdown();
-            res.json(rs);
+            res.json(rs.rows);
+        });
+    }
+    consulta4(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            //await cliente.connect()
+            const query = 'select * from cuentahabientes;';
+            const rs = yield database_1.default.execute(query);
+            //await cliente.shutdown();
+            res.json(rs.rows);
+        });
+    }
+    consulta5(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            //await cliente.connect()
+            const query = 'select * from cuentahabientes;';
+            const rs = yield database_1.default.execute(query);
+            //await cliente.shutdown();
+            res.json(rs.rows);
         });
     }
 }
