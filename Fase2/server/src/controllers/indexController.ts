@@ -11,8 +11,8 @@ class IndexController{
         let cui = req.body['cui']
         let nombre = req.body['nombre']
         let apellido = req.body['apellido']
-        const query = 'select * from operaciones_por_cuentahabiente where cui = ? and nombre = ? and apellido = ? ;';
-        const rs =  await cliente.execute(query, [cui, nombre, apellido])
+        const query = 'select * from operaciones_por_cuentahabiente where cui = '+ cui +' and nombre = ? and apellido = ? ;';
+        const rs =  await cliente.execute(query, [nombre, apellido])
         res.json(rs.rows);
     }
 
@@ -48,8 +48,8 @@ class IndexController{
         let apellido = req.body['apellido']
         let mes = req.body['mes']
         let anio = req.body['anio']
-        const query = 'select * from operaciones_por_cuentahabiente_por_mes where cui = ? and nombre = ? and apellido = ? and mes = ? and anio = ?';
-        const rs =  await cliente.execute(query, [cui, nombre, apellido, mes, anio])
+        const query = 'select * from operaciones_por_cuentahabiente_por_mes where cui = '+ cui + ' and nombre = ? and apellido = ? and mes = ' +mes+ ' and anio = ' + anio + ';';
+        const rs =  await cliente.execute(query, [nombre, apellido])
         res.json(rs.rows);
     }
 }
