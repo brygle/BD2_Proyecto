@@ -1,1 +1,24 @@
-<p>ctres works!</p>
+<section class="text-center">
+    <h1 class="text-success" style="font-size: 40px; font-weight:bold"> CUENTAHABIENTES</h1>
+    <table mdbTable border="1">
+        <thead class="black white-text">
+            <tr>
+                <th *ngFor="let head of headElements" scope="col-sm">{{head}} </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr mdbTableCol *ngFor="let row of Rows" class="grey black-text">
+                <td>{{row.cui}}</td>
+                <td>{{row.nombre}}</td>
+                <td>{{row.apellido}}</td>
+                <td>{{row.email}}</td>
+                <td>{{row.genero}}</td>
+                <td>{{row.institucion}}</td>
+                <td>{{row.abreviacion}}</td>
+                <td>{{row.tipo}}</td>
+                <td>{{row.fecha_registro}}</td>
+                <td>{{row.saldo}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

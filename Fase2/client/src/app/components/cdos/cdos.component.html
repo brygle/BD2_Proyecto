@@ -1,1 +1,23 @@
-<p>cdos works!</p>
+<section class="text-center">
+    <h1 class="text-success" style="font-size: 40px; font-weight:bold"> CRÉDITO Y DÉBITO POR INSTITUCIÓN </h1>
+    <input mdbInput name="txtInstitucion" [(ngModel)]="institucion" type="text" id="institucion"
+        placeholder="Ingrese Institución">
+    <br>
+    <button (click)="Buscar()"  type="submit" mdbBtn color="secondary">Buscar</button>
+    <br>
+    <br>
+    <table mdbTable border="1">
+        <thead class="black white-text">
+            <tr>
+                <th *ngFor="let head of headElements" scope="col-sm">{{head}} </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr mdbTableCol *ngFor="let row of Rows" class="grey black-text">
+                <td>{{this.ins}}</td>
+                <td>{{this.debito}}</td>
+                <td>{{this.credito}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

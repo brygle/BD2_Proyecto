@@ -1,1 +1,45 @@
-<p>ccinco works!</p>
+<section class="text-center">
+    <h1 class="text-success" style="font-size: 40px; font-weight:bold"> OPERACIONES POR CUENTAHABIENTE POR MES</h1>
+    <input mdbInput name="txtCui" [(ngModel)]="cui" type="text" id="cui"
+        placeholder="Ingrese cui">
+    <br>
+    <input mdbInput name="txtNombre" [(ngModel)]="nombre" type="text" id="nombre"
+        placeholder="Ingrese nombre">
+    <br>
+    <input mdbInput name="txtApellido" [(ngModel)]="apellido" type="text" id="apellido"
+        placeholder="Ingrese apellido">
+    <br>
+    <input mdbInput name="txtmes" [(ngModel)]="mes" type="text" id="mes"
+        placeholder="Ingrese mes en Números">
+    <br>
+    <input mdbInput name="txtAnio" [(ngModel)]="anio" type="text" id="anio"
+        placeholder="Ingrese Año en Números">
+    <br>
+    <button (click)="Buscar()"  type="submit" mdbBtn color="secondary">Buscar</button>
+    <br>
+    <br>
+    <table mdbTable border="1">
+        <thead class="black white-text">
+            <tr>
+                <th *ngFor="let head of headElements" scope="col-sm">{{head}} </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr mdbTableCol *ngFor="let row of Rows" class="grey black-text">
+                <td>{{row.cui}}</td>
+                <td>{{row.nombre}}</td>
+                <td>{{row.apellido}}</td>
+                <td>{{row.banco}}</td>
+                <td>{{row.tipo_cuenta}}</td>
+                <td>{{row.fechahora}}</td>
+                <td>{{row.monto}}</td>
+                <td>{{row.tipo_operacion}}</td>
+                <td>{{row.cui_destino}}</td>
+                <td>{{row.nombre_destino}}</td>
+                <td>{{row.apellido_destino}}</td>
+                <td>{{row.banco_destino}}</td>
+                <td>{{row.tipo_cuenta_destino}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
