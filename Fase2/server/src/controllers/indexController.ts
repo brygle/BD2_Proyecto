@@ -52,6 +52,30 @@ class IndexController{
         const rs =  await cliente.execute(query, [nombre, apellido])
         res.json(rs.rows);
     }
+
+    public async registrarCuentahabiente(req:Request, res:Response) : Promise<void>{
+        let cui = req.body['cui']
+        let nombre = req.body['nombre']
+        let apellido = req.body['apellido']
+        let genero = req.body['genero']
+        let saldo = req.body['saldo']
+        let email = req.body['email']
+        let institucion = req.body['institucion']
+        let abreviacion = req.body['abreviacion']
+        let fecha_registro = req.body['fecha_registro']
+        let tipo = req.body['tipo']
+        const query = 'insert into cuentahabientes (cui, nombre, apellido, email, genero, saldo, institucion, abreviacion, fecha_registro, tipo) values ( '+cui+', ?, ?, ?,?, '+ saldo +',?,?,?,?);';
+        const rs =  await cliente.execute(query, [nombre, apellido, email, genero, institucion, abreviacion, fecha_registro, tipo])
+        res.json({"msg": "exito"});
+    }
+
+    public async registrarInstitucion(req:Request, res:Response) : Promise<void>{
+        let institucion_bancaria = req.body['institucion_bancaria']
+        let abreviacion = req.body['abreviacion']
+        const query = 'insert into instituciones_bancarias (institucion_bancaria, abreviacion) values (? , ?);';
+        await cliente.execute(query, [institucion_bancaria, abreviacion])
+        res.json({"msg": "exito"});
+    }
 }
 
 const indexController = new IndexController();

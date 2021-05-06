@@ -69,6 +69,32 @@ class IndexController {
             res.json(rs.rows);
         });
     }
+    registrarCuentahabiente(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let cui = req.body['cui'];
+            let nombre = req.body['nombre'];
+            let apellido = req.body['apellido'];
+            let genero = req.body['genero'];
+            let saldo = req.body['saldo'];
+            let email = req.body['email'];
+            let institucion = req.body['institucion'];
+            let abreviacion = req.body['abreviacion'];
+            let fecha_registro = req.body['fecha_registro'];
+            let tipo = req.body['tipo'];
+            const query = 'insert into cuentahabientes (cui, nombre, apellido, email, genero, saldo, institucion, abreviacion, fecha_registro, tipo) values ( ' + cui + ', ?, ?, ?,?, ' + saldo + ',?,?,?,?);';
+            const rs = yield database_1.default.execute(query, [nombre, apellido, email, genero, institucion, abreviacion, fecha_registro, tipo]);
+            res.json({ "msg": "exito" });
+        });
+    }
+    registrarInstitucion(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let institucion_bancaria = req.body['institucion_bancaria'];
+            let abreviacion = req.body['abreviacion'];
+            const query = 'insert into instituciones_bancarias (institucion_bancaria, abreviacion) values (? , ?);';
+            yield database_1.default.execute(query, [institucion_bancaria, abreviacion]);
+            res.json({ "msg": "exito" });
+        });
+    }
 }
 const indexController = new IndexController();
 exports.default = indexController;

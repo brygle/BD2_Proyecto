@@ -14,6 +14,9 @@ import { CdosComponent } from './components/cdos/cdos.component';
 import { CtresComponent } from './components/ctres/ctres.component';
 import { CcuatroComponent } from './components/ccuatro/ccuatro.component';
 import { CcincoComponent } from './components/ccinco/ccinco.component';
+import { RegistroCuentahabienteComponent } from './components/registro-cuentahabiente/registro-cuentahabiente.component';
+import { RegistroInstitucionComponent } from './components/registro-institucion/registro-institucion.component';
+import { TransaccionComponent } from './components/transaccion/transaccion.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { CcincoComponent } from './components/ccinco/ccinco.component';
     CdosComponent,
     CtresComponent,
     CcuatroComponent,
-    CcincoComponent
+    CcincoComponent,
+    RegistroCuentahabienteComponent,
+    RegistroInstitucionComponent,
+    TransaccionComponent
   ],
   imports: [
     BrowserModule,

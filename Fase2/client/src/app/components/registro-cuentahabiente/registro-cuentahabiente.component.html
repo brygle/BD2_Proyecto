@@ -1,0 +1,33 @@
+<section class="text-center">
+    <h1 class="text-success" style="font-size: 40px; font-weight:bold"> REGISTRO DE CUENTAHABIENTES </h1>
+    <input mdbInput name="txtCui" [(ngModel)]="cui" type="text" id="cui"
+        placeholder="Ingrese cui">
+    <br>
+    <input mdbInput name="txtNombre" [(ngModel)]="nombre" type="text" id="nombre"
+        placeholder="Ingrese nombre">
+    <br>
+    <input mdbInput name="txtApellido" [(ngModel)]="apellido" type="text" id="apellido"
+        placeholder="Ingrese apellido">
+    <br>
+    <input mdbInput name="txtemail" [(ngModel)]="email" type="text" id="email"
+        placeholder="Ingrese correo">
+    <br>
+    <input mdbInput name="txtGenero" [(ngModel)]="genero" type="text" id="genero"
+        placeholder="Ingrese género">
+    <br>
+    <input mdbInput name="txtSaldo" [(ngModel)]="saldo" type="text" id="saldo"
+        placeholder="Ingrese Saldo Inicial">
+    <br>
+    <input mdbInput name="txtInstitucion" [(ngModel)]="institucion" type="text" id="institucion"
+        placeholder="Ingrese Institucion Bancaria">
+    <br>
+    <input mdbInput name="txtAbreviacion" [(ngModel)]="abreviacion" type="text" id="abreviacion"
+        placeholder="Ingrese Abreviacion de Banco">
+    <br>
+    <input mdbInput name="txtTipo" [(ngModel)]="tipo" type="text" id="tipo"
+        placeholder="Ingrese Tipo de Cuenta">
+    <br>
+    <button (click)="Registrar()"  type="submit" mdbBtn color="secondary">Registrar</button>
+    <br>
+    <br>
+</section>

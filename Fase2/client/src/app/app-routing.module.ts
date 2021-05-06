@@ -7,6 +7,10 @@ import { CtresComponent } from './components/ctres/ctres.component';
 import { CcuatroComponent } from './components/ccuatro/ccuatro.component';
 import { CcincoComponent } from './components/ccinco/ccinco.component';
 
+import { RegistroCuentahabienteComponent } from './components/registro-cuentahabiente/registro-cuentahabiente.component';
+import { RegistroInstitucionComponent } from './components/registro-institucion/registro-institucion.component';
+import { TransaccionComponent } from './components/transaccion/transaccion.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -32,6 +36,18 @@ const routes: Routes = [
   {
     path: 'C5',
     component: CcincoComponent
+  },
+  {
+    path: 'RegistroCuentahabiente',
+    component: RegistroCuentahabienteComponent
+  },
+  {
+    path: 'RegistroInstitucion',
+    component: RegistroInstitucionComponent
+  },
+  {
+    path: 'Transaccion',
+    component: TransaccionComponent
   }
 ];
 

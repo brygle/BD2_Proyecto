@@ -93,5 +93,41 @@ export class ConsultasService {
             }
         ).pipe(map(data => data));
     }
+
+    RegistrarCuentahabiente(cui: number, nombre: string, apellido: string, email: string ,genero:string, saldo:number, institucion:string, abreviacion: string, fecha_registro:string, tipo:string) {
+        const url = baseUrl + "/RegistroCuentahabiente";
+        return this.http.post(
+            url,
+            {
+                "cui": cui,
+                "nombre": nombre,
+                "apellido": apellido,
+                "email": email,
+                "genero": genero,
+                "saldo": saldo,
+                "institucion": institucion,
+                "abreviacion": abreviacion,
+                "fecha_registro": fecha_registro,
+                "tipo":tipo
+            },
+            {
+                headers: this.headers
+            }
+        ).pipe(map(data => data));
+    }
+
+    RegistrarInstitucion(institucion_bancaria:string, abreviacion:string) {
+        const url = baseUrl + "/RegistroInstitucionBancaria";
+        return this.http.post(
+            url,
+            {
+                "cui": institucion_bancaria,
+                "nombre": abreviacion
+            },
+            {
+                headers: this.headers
+            }
+        ).pipe(map(data => data));
+    }
     
 }

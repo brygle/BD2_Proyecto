@@ -1,0 +1,12 @@
+<section class="text-center">
+    <h1 class="text-success" style="font-size: 40px; font-weight:bold"> REGISTRO DE INSTITUCIONES BANCARIAS </h1>
+    <input mdbInput name="txtInstitucion" [(ngModel)]="institucion_bancaria" type="text" id="institucion"
+        placeholder="Ingrese Nombre de Institucion Bancaria">
+    <br>
+    <input mdbInput name="txtAbreviacion" [(ngModel)]="abreviacion" type="text" id="abreviacion"
+        placeholder="Ingrese Abreviacion de Banco">
+    <br>
+    <button (click)="Registrar()"  type="submit" mdbBtn color="secondary">Registrar</button>
+    <br>
+    <br>
+</section>
