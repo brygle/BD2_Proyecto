@@ -18,6 +18,8 @@ class IndexRoutes {
         this.router.post('/consulta3', indexController_1.default.consulta3);
         this.router.post('/consulta4', indexController_1.default.consulta4);
         this.router.post('/consulta5', indexController_1.default.consulta5);
+        this.router.post('/RegistroCuentahabiente', indexController_1.default.registrarCuentahabiente);
+        this.router.post('/RegistroInstitucionBancaria', indexController_1.default.registrarInstitucion);
     }
 }
 const indexRoutes = new IndexRoutes();
