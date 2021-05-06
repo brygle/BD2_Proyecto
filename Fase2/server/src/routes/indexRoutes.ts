@@ -17,6 +17,8 @@ class IndexRoutes{
         this.router.post('/consulta3', indexController.consulta3);
         this.router.post('/consulta4', indexController.consulta4);
         this.router.post('/consulta5', indexController.consulta5);
+        this.router.post('/RegistroCuentahabiente', indexController.registrarCuentahabiente);
+        this.router.post('/RegistroInstitucionBancaria', indexController.registrarInstitucion);
     }
 
 }
