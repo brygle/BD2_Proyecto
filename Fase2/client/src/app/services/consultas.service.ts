@@ -121,8 +121,8 @@ export class ConsultasService {
         return this.http.post(
             url,
             {
-                "cui": institucion_bancaria,
-                "nombre": abreviacion
+                "institucion_bancaria": institucion_bancaria,
+                "abreviacion": abreviacion
             },
             {
                 headers: this.headers
